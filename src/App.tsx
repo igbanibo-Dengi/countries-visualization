@@ -60,17 +60,17 @@ const App: React.FC = () => {
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
-    scrollToTop(); // Scroll to top when page is changed
+    setTimeout(scrollToTop, 300);  // Scroll to top when page is changed
   };
 
   const handleNextPage = () => {
     setCurrentPage((prevPage) => Math.min(prevPage + 1, totalPages));
-    scrollToTop(); // Scroll to top when next page is clicked
+    setTimeout(scrollToTop, 300);  // Scroll to top when next page is clicked
   };
 
   const handlePreviousPage = () => {
     setCurrentPage((prevPage) => Math.max(prevPage - 1, 1));
-    scrollToTop(); // Scroll to top when previous page is clicked
+    setTimeout(scrollToTop, 300);  // Scroll to top when previous page is clicked
   };
 
   const sortedCountries = currentCountries
